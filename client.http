@@ -1,0 +1,8 @@
+### GET root
+GET http://localhost:3000/
+
+### GET /spells
+GET http://localhost:3000/spells
+
+### GET /spells/1
+GET http://localhost:3000/spells/1
