@@ -45,8 +45,23 @@ RSpec.describe "Spells", type: :request do
     end
     it 'should respond with 404 when given invalid id' do
       put '/spells/99', :params => {name: 'Teleport', description: 'You end up somewhere else', type: 'transportation'}
-      expect(respronse).to have_http_status(404)
+      expect(response).to have_http_status(404)
       expect(response.body).to include("Could not find spell")
     end
   end
+
+  describe 'delete /spells/:id' do
+    it 'should respond with json given correct id' do
+      put '/spells/4', :params => {name: 'Teleport', description: 'You end up somewhere else', type: 'transportation'}
+      delete '/spells/4', :params => {name: 'Teleport', description: 'You end up somewhere else', type: 'transportation'}
+      expect(response).to have_http_status(200) 
+      expect(response.body).to include("You end up somewhere else")
+    end
+    it 'should respond with 404 when given invalid id' do
+      delete '/spells/99', :params => {name: 'Teleport', description: 'You end up somewhere else', type: 'transportation'}
+      expect(response).to have_http_status(404)
+      expect(response.body).to include("Could not find spell")
+    end
+  end
+
 end
