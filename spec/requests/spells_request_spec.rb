@@ -14,10 +14,10 @@ RSpec.describe "Spells", type: :request do
   end
 
   describe 'get /spells/:id' do
-    it 'should respond with json given correct if' do
+    it 'should respond with show page given correct id' do
       get '/spells/1'
       expect(response).to have_http_status(200)
-      expect(response.content_type).to eq("application/json; charset=utf-8") 
+      expect(response).to render_template("show") 
     end
 
     it 'should respond with 404 when given invalid id' do

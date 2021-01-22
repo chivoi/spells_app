@@ -27,7 +27,7 @@ class SpellsController < ApplicationController
   end
 
   def show
-    render json: @spell
+    
   end
 
   def create
