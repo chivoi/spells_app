@@ -20,7 +20,7 @@ class SpellsController < ApplicationController
     }
   ]
 
-  before_action :set_spell, only: [:show, :update, :delete]
+  before_action :set_spell, only: [:show, :update, :destroy]
 
   def index 
     render json: @@spells
@@ -52,9 +52,9 @@ class SpellsController < ApplicationController
     render json: updated_spell, status: 200
   end
 
-  def delete 
+  def destroy 
     deleted_spell = @@spells.delete_at(@index)
-    render json: deleted_spell, status: 200
+    render json: @@spells, status: 200
   end
 
   private
