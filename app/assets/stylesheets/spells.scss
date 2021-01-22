@@ -38,17 +38,29 @@
       box-shadow: 0 0 11px rgba(33, 33, 33, .2);
     }
   }
-
+  a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
   .fire {
     border-top: #e25822 solid 5px;
+    a:hover {
+      color:  #e25822;
+    }
   }
 
   .force {
     border-top: #1d6ee2 solid 5px;
+    a:hover {
+      color:  #1d6ee2;
+    }
   }
 
   .death {
     border-top: #402b59 solid 5px;
+    a:hover {
+      color:  #402b59;
+    }
   }
 }
 

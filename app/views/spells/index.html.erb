@@ -3,9 +3,9 @@
   <section class="card-deck">
     <% spells.each do |spell| %>
     <div class="card <%= spell[:type]%>">
-
       <h5><%= spell[:name] %></h5>
       <p><%= spell[:description]%> </p>
+      <%= link_to "See More", spell_path(spell[:id]) %>
     </div>
     <% end %>
   </section>
