@@ -3,5 +3,8 @@
   <section class="spell-content">
     <h2>Type: <%= @spell[:type].capitalize  %> </h2>
     <p> <%= @spell[:description ]%> </p>
+    <div class="button-container">
+      <%= button_to "Delete Spell", {action: "destroy",id: @spell[:id]}, {method: :delete, class: "btn danger", data: {confirm: "Are you sure?"}}   %>
+    </div>
   </section>
 </main>

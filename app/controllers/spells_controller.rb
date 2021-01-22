@@ -53,8 +53,8 @@ class SpellsController < ApplicationController
   end
 
   def destroy 
-    deleted_spell = @@spells.delete_at(@index)
-    render json: @@spells, status: 200
+    @@spells.delete_at(@index)
+    redirect_to spells_path
   end
 
   private

@@ -65,15 +65,33 @@
 }
 
 #pages-show {
-    .fire {
-      color: #e25822;
+  .fire {
+    color: #e25822;
+  }
+
+  .force {
+    color: #1d6ee2;
+  }
+
+  .death {
+    color: #402b59;
+  }
+  .btn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding: 12px 20px;
+    font-size: 15px;
+    transition: all 0.25;
+    cursor: pointer;
+  }
+  .danger {
+    border-color: red;
+    color: red;
+    &:hover {
+      color: white;
+      background-color: red;
     }
-  
-    .force {
-      color: #1d6ee2;
-    }
-  
-    .death {
-      color: #402b59;
-    }
+  }
 }
