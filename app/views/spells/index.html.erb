@@ -1,0 +1,12 @@
+<main id="pages-index">
+  <h1>All the spells</h1>
+  <section class="card-deck">
+    <% spells.each do |spell| %>
+    <div class="card <%= spell[:type]%>">
+
+      <h5><%= spell[:name] %></h5>
+      <p><%= spell[:description]%> </p>
+    </div>
+    <% end %>
+  </section>
+</main>

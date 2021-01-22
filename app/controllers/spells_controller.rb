@@ -23,7 +23,7 @@ class SpellsController < ApplicationController
   before_action :set_spell, only: [:show, :update, :destroy]
 
   def index 
-    render json: @@spells
+    render :index, locals: {spells: @@spells}
   end
 
   def show

@@ -8,8 +8,8 @@ RSpec.describe "Spells", type: :request do
     it 'should respond with 200 success' do
       expect(response).to have_http_status(200)
     end
-    it 'should respond with json' do
-      expect(response.content_type).to eq("application/json; charset=utf-8") 
+    it 'should render index page' do
+      expect(response).to render_template("index") 
     end
   end
 

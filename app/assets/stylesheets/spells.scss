@@ -1,3 +1,53 @@
 // Place all the styles related to the Spells controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#pages-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: blue;
+  }
+  .card-deck {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+  h5 {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+  }
+
+  p {
+    margin-left: 0.5rem;
+  }
+
+  .card {
+    flex: 1 0 200px;
+    background-color: white;
+    box-sizing: border-box; 
+    margin: 1rem .25rem;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    }
+  }
+
+  .fire {
+    border-top: #e25822 solid 5px;
+  }
+
+  .force {
+    border-top: #1d6ee2 solid 5px;
+  }
+
+  .death {
+    border-top: #402b59 solid 5px;
+  }
+}
