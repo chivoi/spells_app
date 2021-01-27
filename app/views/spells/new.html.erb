@@ -1,0 +1,19 @@
+<main id='pages-new'>
+  <h1>Create a New Spell</h1>
+  <form action="<%=spells_path%>" method="POST">
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="name" />
+    </div>
+    <div class="field">
+      <label>Type</label>
+      <input type="text" name="type" />
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <textarea name="description"> </textarea>
+    </div>
+    <input type="submit" value="Create a Spell" />
+  </form>
+</main>

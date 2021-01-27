@@ -30,6 +30,10 @@ class SpellsController < ApplicationController
     
   end
 
+  def new
+
+  end
+
   def create
     spell = {
       id: @@spells.last[:id]+1, 
@@ -37,8 +41,8 @@ class SpellsController < ApplicationController
       description: params[:description],
       type: params[:type]
     }
-    created_spell = @@spells.push(spell).last
-    render json: created_spell, status: 201
+    @@spells.push(spell).last
+    redirect_to spells_path
   end
 
   def update

@@ -62,6 +62,14 @@
       color:  #402b59;
     }
   }
+
+  .poison {
+    border-top:  #3a9149 solid 5px;
+    a:hover {
+      color: #3a9149;
+    }  
+    
+  }
 }
 
 #pages-show {
@@ -76,6 +84,11 @@
   .death {
     color: #402b59;
   }
+
+  .poison {
+    color: #3a9149;
+  }
+
   .btn {
     background-color: white;
     border: 1px solid black;
@@ -93,5 +106,16 @@
       color: white;
       background-color: red;
     }
+  }
+}
+
+#pages-new {
+  form {
+    width: 50%;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 }

@@ -30,9 +30,8 @@ RSpec.describe "Spells", type: :request do
   describe 'post /spells' do
     it 'should respond with 201 created' do
       post '/spells', :params => {name:"Invisibility", description:"Turns you invisible", type: "illusion"}
-      expect(response).to have_http_status(:created)
-      expect(response.content_type).to eq("application/json; charset=utf-8") 
-      expect(response.body).to include("Turns you invisible")
+      expect(response).to redirect_to('/spells')
+      # expect(response.body).to include("Turns you invisible")
     end
   end
 
